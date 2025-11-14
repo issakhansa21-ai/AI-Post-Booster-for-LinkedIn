@@ -1,87 +1,137 @@
-AI Post Booster for LinkedIn (n8n Automation Workflow)
+# 🚀 AI Post Booster for LinkedIn (n8n Automation Workflow)
 
-Automate your LinkedIn content creation with a single import.
+Automate your entire LinkedIn posting pipeline with a single ready-made n8n workflow.
 
-This workflow scrapes viral posts from top creators in your niche, rewrites them using AI, and publishes fresh, high-quality content directly to your LinkedIn profile — fully automated through n8n.
+This system:
+- Scrapes high-performing LinkedIn posts from creators in your niche  
+- Rewrites them using AI in your own tone  
+- Publishes them directly to your LinkedIn profile  
 
-🚀 What This Workflow Does
+All 100% automated.
 
-The AI Post Booster for LinkedIn system is designed to automate the entire content pipeline:
+---
 
-1. Scrapes High-Performing Posts
+# 🔥 Features
 
-Pulls top-engaging LinkedIn posts from creators in your niche.
+## 1. Scrape High-Performing LinkedIn Posts
+- Scrapes top posts from creators in your niche  
+- Uses Apify or any compatible dataset  
+- Fully configurable
 
-Uses Apify (or your chosen scraper) to collect the content.
+## 2. AI Rewrite Engine
+- Rewrites scraped posts using GPT  
+- Unique, human-like, non-plagiarized content  
+- Customizable prompt, tone, style
 
-2. Rewrites Using AI
+## 3. Auto-Publish to LinkedIn
+- Publishes directly to your LinkedIn profile  
+- Optionally create drafts, store in Sheets/Notion, or schedule posts  
+- Zero manual work
 
-Sends each scraped post to your preferred AI model (OpenAI / GPT-4 / GPT-5).
+---
 
-Rewrites the post with:
+# 📦 Included in This Repository
 
-A unique angle
-
-Your tone of voice
-
-Zero plagiarism
-
-Full readability
-
-3. Auto-Publishes to LinkedIn
-
-Sends the rewritten content directly to your LinkedIn account.
-
-Fully automated posting (daily, scheduled, or trigger-based depending on your setup).
-
-📦 Included in This Repository
-
+```
 AI Post Booster for LinkedIn.json
-Ready-to-import n8n workflow file.
+```
 
-🔧 How to Use
-1. Download the JSON File
+This is a **ready-to-import n8n workflow**.
 
-Click the file in this repo and download it to your computer.
+---
 
-2. Import into n8n
+# 🛠️ How to Use
 
-Open your n8n dashboard
+## Step 1 — Download the JSON File
+Download the file from this GitHub repo:  
+`AI Post Booster for LinkedIn.json`
 
-Go to Workflows → Import from File
+## Step 2 — Import into n8n
+1. Open your n8n instance  
+2. Go to: **Workflows → Import → From File**  
+3. Select the JSON file  
+4. The full workflow will load instantly
 
-Upload AI Post Booster for LinkedIn.json
+## Step 3 — Update Your Credentials
+Open each credential node inside the workflow and update:
 
-3. Update Your Credentials
+- **Apify API Token**  
+- **OpenAI API Key**  
+- **LinkedIn OAuth / App Credentials**  
 
-Inside the workflow, you must edit:
+> ⚠️ Without valid credentials, the workflow will NOT run.
 
-Apify API Token (or your scraper credentials)
+---
 
-OpenAI API Key
+# ⚙️ Customize the Workflow (Optional)
 
-LinkedIn App / OAuth Credentials
+## Scraper Settings
+- Change creator usernames  
+- Modify number of posts scraped  
+- Adjust scraping frequency (daily, weekly, custom)
 
-Any additional environment variables you use (optional)
+## AI Rewrite Settings
+Inside the AI node, edit:
+- Tone  
+- Style  
+- Creativity  
+- CTA  
 
-⚠️ The workflow will not run until credentials are correctly set.
+## Publishing Settings
+Modify the final LinkedIn node:
+- Publish immediately  
+- Create draft  
+- Log only  
+- Save elsewhere (Sheets, Notion, Airtable)
 
-4. Adjust Scraper Settings (Optional)
+---
 
-Choose:
+# 🧩 Workflow Diagram
 
-Which creators to scrape
+```
+[Schedule Trigger]
+        ↓
+[Scrape Posts (Apify)]
+        ↓
+[Clean & Prepare Data]
+        ↓
+[AI Rewrite (OpenAI)]
+        ↓
+[Formatter → Final Text]
+        ↓
+[Publish to LinkedIn]
+        ↓
+[Log Output]
+```
 
-How many posts
+---
 
-How often the workflow runs
+# 🧪 Testing
 
-Your rewrite prompt/tone
+1. Run the workflow manually  
+2. Inspect the rewritten content  
+3. Use “Create Draft” before posting live  
+4. Activate workflow when ready  
 
-5. Activate the Workflow
+---
 
-Once everything is configured:
+# 📝 Notes
 
-Click Activate
+- Works on cloud or self-hosted n8n  
+- Fully modular — extend or modify any part  
+- Can be connected to multi-platform posting  
+- Supports analytics and logging
 
-The automation will start running based on your defined schedule or trigger.
+---
+
+# 🤝 Contribute
+
+Pull requests, suggestions, and improvements are welcome.
+
+---
+
+# ⭐ Support
+
+If this project helped you, please ⭐ star the repository.  
+Your support encourages more open-source automations.
+
